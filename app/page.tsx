@@ -17,6 +17,7 @@ import { GrainOverlay } from "@/components/GrainOverlay";
 import { SootCursor } from "@/components/SootCursor";
 import { Atmosphere } from "@/components/Atmosphere";
 import Navbar from "@/components/Navbar";
+import ThreeHero from "@/components/ThreeHero";
 import ParticleBackground from "@/components/ParticleBackground";
 
 export default function Home() {
@@ -41,6 +42,13 @@ export default function Home() {
       >
         <Navbar />
         <div className="px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48">
+          {/* 3D scrollytelling hero */}
+          <ThreeHero
+            name={portfolioData.personal.name}
+            title={portfolioData.personal.title}
+            subtitle={portfolioData.personal.subtitle}
+          />
+          {/* Existing 2D hero (optional, can be removed if you only want 3D) */}
           <Hero personalData={portfolioData.personal} />
           <About personalData={portfolioData.personal} />
           <Skills skillsData={portfolioData.skills} />
